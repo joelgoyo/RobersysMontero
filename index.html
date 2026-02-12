@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robersy Montero | Catálogo Exclusivo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #fdfcfb;
+            --accent-color: #1a1a1a;
+            --gold-main: #d4af37;
+            --gold-gradient: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            --glass-bg: rgba(255, 255, 255, 0.45);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #fdfcfb, #eee1d5, #f8bbd0, #e2d1c3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            color: #1a1a1a;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 25px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Logo con resplandor */
+        .profile-container {
+            margin-bottom: 35px;
+        }
+
+        .logo-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 15px 35px rgba(181, 146, 75, 0.2);
+            background-color: #fff;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .logo-img:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .username {
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 35px;
+        }
+
+        /* Separador elegante */
+        .section-title {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--gold-main);
+            text-transform: uppercase;
+        }
+
+        .section-title::before, .section-title::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(181, 146, 75, 0.3);
+        }
+
+        .section-title:not(:empty)::before { margin-right: 1.5em; }
+        .section-title:not(:empty)::after { margin-left: 1.5em; }
+
+        /* Tarjetas de enlaces Glassmorphism */
+        .link-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 16px 22px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--gold-main);
+            box-shadow: 0 15px 30px rgba(181, 146, 75, 0.15);
+            color: #000;
+        }
+
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: white;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .link-card span {
+            flex-grow: 1;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .icon-right {
+            font-size: 0.7rem;
+            opacity: 0.3;
+        }
+
+        /* Footer */
+        .footer-text {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            opacity: 0.5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="profile-container">
+            <img src="imagen/image.png" alt="Robersy Montero Logo" class="logo-img">
+            <h1 class="brand-name">Robersys Montero</h1>
+            <div class="username">@EmpredimientoRobersysMontero</div>
+        </div>
+
+        <div class="links-wrapper">
+            <a href="catalogo.html" class="link-card">
+                <div class="icon-box">
+                    <i class="fas fa-gem" style="color: #d4af37;"></i>
+                </div>
+                <span>Catálogo Robersy</span>
+                <i class="fas fa-chevron-right icon-right"></i>
+            </a>
+            
+            <div class="section-title">Nuestras Redes</div>
+            
+            <a href="https://wa.me/tu_numero" class="link-card" target="_blank">
+                <div class="icon-box">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                </div>
+                <span>WhatsApp Personal</span>
+                <i class="fas fa-chevron-right icon-right"></i>
+            </a>
+
+            <a href="https://tiktok.com/@tu_usuario" class="link-card" target="_blank">
+                <div class="icon-box">
+                    <i class="fab fa-tiktok" style="color: #000;"></i>
+                </div>
+                <span>TikTok Oficial</span>
+                <i class="fas fa-chevron-right icon-right"></i>
+            </a>
+            
+            <a href="https://instagram.com/_ross.ve" class="link-card" target="_blank">
+                <div class="icon-box">
+                    <i class="fab fa-instagram" style="color: #E1306C;"></i>
+                </div>
+                <span>Instagram</span>
+                <i class="fas fa-chevron-right icon-right"></i>
+            </a>
+        </div>
+
+        <p class="footer-text">© Robersy Montero • 2024</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Entrada elegante de los elementos
+            $('.link-card, .section-title, .profile-container').css({'opacity': '0', 'transform': 'translateY(20px)'});
+            
+            $('.profile-container').animate({'opacity': '1', 'transform': 'translateY(0)'}, 800);
+            
+            $('.link-card, .section-title').each(function(index) {
+                $(this).delay(200 * index).animate({
+                    'opacity': '1'
+                }, {
+                    step: function(now, fx) {
+                        $(this).css('transform', 'translateY('+(20 - (now * 20))+'px)');
+                    },
+                    duration: 800
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
