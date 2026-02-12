@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robersy Montero | Catálogo Exclusivo</title>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -32,9 +35,17 @@
         }
 
         @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .main-container {
@@ -97,14 +108,20 @@
             text-transform: uppercase;
         }
 
-        .section-title::before, .section-title::after {
+        .section-title::before,
+        .section-title::after {
             content: '';
             flex: 1;
             border-bottom: 1px solid rgba(181, 146, 75, 0.3);
         }
 
-        .section-title:not(:empty)::before { margin-right: 1.5em; }
-        .section-title:not(:empty)::after { margin-left: 1.5em; }
+        .section-title:not(:empty)::before {
+            margin-right: 1.5em;
+        }
+
+        .section-title:not(:empty)::after {
+            margin-left: 1.5em;
+        }
 
         /* Tarjetas de enlaces Glassmorphism */
         .link-card {
@@ -142,7 +159,7 @@
             background: white;
             margin-right: 15px;
             font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
         }
 
         .link-card span {
@@ -167,10 +184,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="main-container">
-        
+
         <div class="profile-container">
             <img src="imagen/image.png" alt="Robersy Montero Logo" class="logo-img">
             <h1 class="brand-name">Robersys Montero</h1>
@@ -185,10 +203,10 @@
                 <span>Catálogo Robersy</span>
                 <i class="fas fa-chevron-right icon-right"></i>
             </a>
-            
+
             <div class="section-title">Nuestras Redes</div>
-            
-            <a href="https://wa.me/tu_numero" class="link-card" target="_blank">
+
+            <a href="https://wa.me/+584121594453" class="link-card" target="_blank">
                 <div class="icon-box">
                     <i class="fab fa-whatsapp" style="color: #25D366;"></i>
                 </div>
@@ -196,15 +214,16 @@
                 <i class="fas fa-chevron-right icon-right"></i>
             </a>
 
-            <a href="https://tiktok.com/@tu_usuario" class="link-card" target="_blank">
+            <a href="https://www.tiktok.com/@robersys_16hotmail.com?_r=1&_t=ZS-93qWCkH7xKu" class="link-card"
+                target="_blank">
                 <div class="icon-box">
                     <i class="fab fa-tiktok" style="color: #000;"></i>
                 </div>
                 <span>TikTok Oficial</span>
                 <i class="fas fa-chevron-right icon-right"></i>
             </a>
-            
-            <a href="https://instagram.com/_ross.ve" class="link-card" target="_blank">
+
+            <a href="https://www.instagram.com/emprendimientorobersys?igsh=MXBkZjh0cTlwdGk4cA%3D%3D&utm_source=qr" class="link-card" target="_blank">
                 <div class="icon-box">
                     <i class="fab fa-instagram" style="color: #E1306C;"></i>
                 </div>
@@ -218,18 +237,18 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             // Entrada elegante de los elementos
-            $('.link-card, .section-title, .profile-container').css({'opacity': '0', 'transform': 'translateY(20px)'});
-            
-            $('.profile-container').animate({'opacity': '1', 'transform': 'translateY(0)'}, 800);
-            
-            $('.link-card, .section-title').each(function(index) {
+            $('.link-card, .section-title, .profile-container').css({ 'opacity': '0', 'transform': 'translateY(20px)' });
+
+            $('.profile-container').animate({ 'opacity': '1', 'transform': 'translateY(0)' }, 800);
+
+            $('.link-card, .section-title').each(function (index) {
                 $(this).delay(200 * index).animate({
                     'opacity': '1'
                 }, {
-                    step: function(now, fx) {
-                        $(this).css('transform', 'translateY('+(20 - (now * 20))+'px)');
+                    step: function (now, fx) {
+                        $(this).css('transform', 'translateY(' + (20 - (now * 20)) + 'px)');
                     },
                     duration: 800
                 });
@@ -237,4 +256,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>
